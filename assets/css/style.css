@@ -7,7 +7,7 @@
     --text-main: #5D4037;
     --primary: #FF9EAA;
     --secondary: #80DEEA;
-    --accent: #FFE082;
+    --accent: #fad462;
     
     /* 功能色 */
     --btn-primary: #FF6F91;
@@ -88,6 +88,7 @@ body.scrollable {
     box-shadow: var(--clay-shadow);
     text-align: center;
     width: 100%;
+    height: 97%;
 }
 
 /* 載入畫面 */
@@ -215,6 +216,13 @@ body.scrollable {
     transform: scale(1.15) rotate(5deg);
 }
 
+.theme-name {
+    font-size: 1.6rem;
+    font-weight: 900;
+    margin-bottom: 10px;
+    color: var(--text-main);
+}
+
 .tag-container {
     display: flex;
     justify-content: center;
@@ -280,16 +288,14 @@ canvas#gameWorld:active { cursor: grabbing; }
     position: absolute;
     top: 20px; left: 50%;
     transform: translateX(-50%);
-    background: white;
-    padding: 10px 30px;
-    border-radius: 30px;
+    font-size: 2.5rem;
     font-weight: 900;
-    font-size: 1.4rem;
     color: var(--text-main);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-shadow: 2px 2px 0px #FFF, 4px 4px 0px rgba(0,0,0,0.1);
     white-space: nowrap;
     z-index: 20;
-    border: 3px solid #FFECB3;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
 }
 
 #lesson-modal {
@@ -383,9 +389,9 @@ canvas#gameWorld:active { cursor: grabbing; }
     flex: 1.2; display: flex; flex-direction: column; align-items: center;
 }
 .flashcard-media img {
-    width: 100%; max-width: 100px; height: auto; object-fit: contain; margin-bottom: 5px;
+    width: 100%; max-width: 180px; height: auto; object-fit: contain; margin-bottom: 5px;
 }
-.flashcard-word { font-weight: bold; color: #6c757d; font-size: 1.2rem; }
+.flashcard-word { font-weight: bold; color: #6c757d; font-size: 1.5rem; }
 
 /* 測驗 */
 .quiz-options-grid {
@@ -424,4 +430,6 @@ canvas#gameWorld:active { cursor: grabbing; }
     .tag-container { justify-content: flex-start; margin-bottom: 5px; }
     .progress-wrapper { margin-top: 5px; }
     .flashcard-char { font-size: 4rem; }
+    .flashcard-media img { max-width: 80px; }
+    .flashcard-word { font-size: 1rem; }
 }

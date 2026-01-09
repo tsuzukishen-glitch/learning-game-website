@@ -44,7 +44,7 @@ const ASSETS = {
     l11_icon: "assets/images/Train.png",
     l11_card_i: "assets/images/Shirt.png", l11_card_u: "assets/images/Turtle.png", l11_card_yu: "assets/images/Fish.png",
     l12_icon: "assets/images/Grad.png",
-    l12_card_1: "assets/images/Wand.png", l12_card_2: "assets/images/Mom.png.png", l12_card_3: "assets/images/Diploma.png",
+    l12_card_1: "assets/images/Wand.png", l12_card_2: "assets/images/Mom.png", l12_card_3: "assets/images/Diploma.png",
     
     default: "assets/images/Icon.png"
 };
@@ -55,7 +55,7 @@ const COURSE_DATA = [
         week: 1, title: "第一週：嘴唇體操", color: "#FF9EAA",
         lessons: [
             { id: "L1", title: "L1 啵啵爆米花 (ㄅㄆㄇㄈ)", imgKey: "l1_icon", content: { 
-                warmup: "假裝我們是爆米花機，蹲在地上，「啵(ㄅ)！」跳起來！接著像吹泡泡一樣，「普(ㄆ)！」吹一口氣。", 
+                warmup: "假裝我們是爆米花機，蹲在地上<br>「啵(ㄅ)！」跳起來！接著像吹泡泡一樣，「噗(ㄆ)！」吹一口氣。", 
                 cards: [{t:"ㄅ", w:"包子", i:ASSETS.l1_card_b}, {t:"ㄆ", w:"葡萄", i:ASSETS.l1_card_p}, {t:"ㄇ", w:"帽子", i:ASSETS.l1_card_m}, {t:"ㄈ", w:"飛機", i:ASSETS.l1_card_f}],
                 game: { title:"嘴唇夾夾樂", desc:"請孩子抿住嘴唇唸「ㄅ、ㄆ、ㄇ」，家長假裝要撬開孩子的嘴巴，孩子要用力閉緊，感受嘴唇的力量。" },
                 quiz: [
@@ -65,7 +65,7 @@ const COURSE_DATA = [
                 ]
             }},
             { id: "L2", title: "L2 小鼓手咚咚咚 (ㄉㄊㄋㄌ)", imgKey: "l2_icon", content: {
-                warmup: "大家當小鼓手，用手拍大腿，「ㄉ、ㄉ、ㄉ」！接著假裝踢足球，「ㄊ、ㄊ、ㄊ」！",
+                warmup: "大家當小鼓手，用手拍大腿<br>「ㄉ、ㄉ、ㄉ」！接著假裝踢足球，「ㄊ、ㄊ、ㄊ」！",
                 cards: [{t:"ㄉ", w:"刀子", i:ASSETS.l2_card_d}, {t:"ㄊ", w:"兔子", i:ASSETS.l2_card_t}, {t:"ㄋ", w:"牛奶", i:ASSETS.l2_card_n}, {t:"ㄌ", w:"快樂", i:ASSETS.l2_card_l}],
                 game: { title:"聽音踩踩樂", desc:"家長把四張字卡散落在地上。家長唸「ㄋㄋㄋ」，孩子要跑去踩(或拍)「ㄋ」的字卡。" },
                 quiz: [
@@ -100,7 +100,7 @@ const COURSE_DATA = [
                 ]
             }},
             { id: "L5", title: "L5 小雞氣球西瓜 (ㄐㄑㄒ)", imgKey: "l5_icon", content: { 
-                warmup: "做一個大大的微笑，牙齒對齊，發出「嘻(ㄒ)」的聲音。", 
+                warmup: "做一個大大的微笑，牙齒對齊<br>發出「嘻(ㄒ)」的聲音。", 
                 cards: [{t:"ㄐ", w:"小雞", i:ASSETS.l5_card_j}, {t:"ㄑ", w:"氣球", i:ASSETS.l5_card_q}, {t:"ㄒ", w:"西瓜", i:ASSETS.l5_card_x}],
                 game: { title:"切切樂", desc:"家長當大西瓜，孩子當小刀子。家長唸「ㄒ」，孩子就跑來假裝切一下家長的手臂。唸「ㄐ」就學小雞啄米。" },
                 quiz: [
@@ -125,7 +125,7 @@ const COURSE_DATA = [
         week: 3, title: "第三週：捲舌與平舌", color: "#FFE082",
         lessons: [
             { id: "L7", title: "L7 蜘蛛吃薯條 (ㄓㄔㄕㄖ)", imgKey: "l7_icon", content: {
-                warmup: "舌頭體操：舌頭往上捲，假裝要碰到天花板(上顎)。發出引擎聲「ㄖㄖㄖ」。",
+                warmup: "舌頭體操：舌頭往上捲，假裝要碰到天花板(上顎)。<br>發出引擎聲「ㄖㄖㄖ」。",
                 cards: [{t:"ㄓ", w:"蜘蛛", i:ASSETS.l7_card_zh}, {t:"ㄔ", w:"吃飯", i:ASSETS.l7_card_ch}, {t:"ㄕ", w:"獅子", i:ASSETS.l7_card_sh}, {t:"ㄖ", w:"日曆", i:ASSETS.l7_card_r}],
                 game: { title:"獅子來了", desc:"家長當獅子(ㄕ)，孩子當蜘蛛(ㄓ)。聽到ㄕ要趕快躲起來，聽到ㄓ要比出蜘蛛人手勢。" },
                 quiz: [
@@ -135,7 +135,7 @@ const COURSE_DATA = [
                 ]
             }},
             { id: "L8", title: "L8 洗澡擦擦臉 (ㄗㄘㄙ)", imgKey: "l8_icon", content: {
-                warmup: "大大的微笑，牙齒輕輕咬合，舌頭平平的頂在牙齒後面，發出像蛇一樣的聲音「嘶(ㄙ)」。",
+                warmup: "大大的微笑，牙齒輕輕咬合，舌頭平平的頂在牙齒後面<br>發出像蛇一樣的聲音「嘶(ㄙ)」。",
                 cards: [{t:"ㄗ", w:"洗澡", i:ASSETS.l8_card_z}, {t:"ㄘ", w:"刺蝟", i:ASSETS.l8_card_c}, {t:"ㄙ", w:"絲瓜", i:ASSETS.l8_card_s}],
                 game: { title:"木頭人變變變", desc:"聽到捲舌音(如ㄓ)要動動身體，聽到平舌音(如ㄗ)要像木頭人不能動(因為舌頭平平的)。" },
                 quiz: [

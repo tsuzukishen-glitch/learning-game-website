@@ -36,26 +36,22 @@
         <i class="fa-solid fa-house text-primary"></i>
     </a>
 
-    <!-- 星星記分 -->
+    <!-- 2. 右上：星星記分 (移到這裡) -->
     <div class="hud-badge position-absolute shadow-sm" 
          style="top: 20px; right: 20px; pointer-events: auto; z-index: 30;">
         <i class="fa-solid fa-star text-warning"></i>
-        <span id="gem-count">0</span> / 12
+        <span id="gem-count">0</span>
+        <!-- 增加 span 包覆，以便控制顯示 -->
+        <span class="total-text"> / 12</span>
     </div>
 
-    <!-- 重置按鈕 -->
+    <!-- 3. 右下：重置按鈕 (移到這裡) -->
     <button class="btn-circle position-absolute shadow-sm" 
             style="bottom: 20px; right: 20px; pointer-events: auto; z-index: 30;" 
             onclick="resetApp()" 
             title="重置">
         <i class="fa-solid fa-rotate-right text-muted"></i>
     </button>
-    
-    <!-- 操作提示 -->
-    <div id="drag-hint" class="position-absolute start-50 top-50 translate-middle text-center" style="pointer-events: none; opacity: 0.6;">
-        <i class="fa-solid fa-hand-pointer fa-2x mb-2 text-primary"></i>
-        <div class="fw-bold text-primary">左右拖曳探索</div>
-    </div>
 </div>
 
 <!-- 3. 課程內容層 (HTML Modal) -->
@@ -80,6 +76,10 @@
     </div>
 </div>
 
+<div class="footer-info">
+    <i class="fa-solid fa-copyright"></i> 2026 奇幻學習島 | 快樂學習，無限可能
+</div>
+
 <!-- 腳本引入 (順序很重要) -->
 <script src="assets/js/common.js"></script>
 <script src="assets/js/data_zhuyin.js"></script>
@@ -87,3 +87,17 @@
 
 </body>
 </html>
+
+<style>
+        @media (max-width: 768px) {
+            .app-title {
+                top: 80px;
+                font-size: 2rem; 
+            }
+            
+            /* 新增：隱藏總分文字，只保留星星和數字 */
+            .total-text {
+                display: none;
+            }
+        }
+    </style>
