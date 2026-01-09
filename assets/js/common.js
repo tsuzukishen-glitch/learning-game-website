@@ -62,28 +62,51 @@ const Common = {
         }
     },
 
-    // 4. 特效 - 紙花 (Confetti)
+    // 4. 特效 - 紙花 (Confetti) - 優化版：加入隨機速度與飄移
     fireConfetti: function() {
-        const colors = ['#FF9EAA', '#80DEEA', '#FFE082'];
-        for(let i=0; i<50; i++) {
+        const colors = ['#FF9EAA', '#80DEEA', '#FFE082', '#A5D6A7', '#FFAB91'];
+        // 增加紙花數量
+        const count = 60; 
+
+        for(let i=0; i<count; i++) {
             const el = document.createElement('div');
+            
+            // 隨機參數產生
+            const duration = Math.random() * 1.5 + 1; // 隨機時間 1s ~ 2.5s
+            const size = Math.random() * 8 + 6;       // 隨機大小 6px ~ 14px
+            const startLeft = Math.random() * 100;    // 起始位置 0% ~ 100%
+            
+            // 初始樣式
             el.style.position = 'fixed';
-            el.style.left = Math.random()*100 + 'vw';
-            el.style.top = '-10px';
-            el.style.width = '12px';
-            el.style.height = '12px';
-            el.style.background = colors[Math.floor(Math.random()*3)];
-            el.style.transition = 'top 1s ease-in, transform 1s linear';
+            el.style.left = startLeft + 'vw';
+            el.style.top = '-20px'; // 從螢幕上方外面開始
+            el.style.width = size + 'px';
+            el.style.height = size + 'px';
+            el.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
             el.style.zIndex = '9999';
             el.style.pointerEvents = 'none';
+            el.style.borderRadius = Math.random() > 0.5 ? '50%' : '2px'; // 圓形或方形
+            
+            // 設定轉場動畫 (時間由隨機決定)
+            el.style.transition = `top ${duration}s ease-in, transform ${duration}s linear, opacity ${duration}s ease-in`;
+            
             document.body.appendChild(el);
             
+            // 觸發動畫 (加入極短的隨機延遲，讓發射感更自然)
             setTimeout(() => {
-                el.style.top = '100vh';
-                el.style.transform = `rotate(${Math.random()*720}deg)`;
-            }, 10);
+                el.style.top = '110vh'; // 掉落到底部外
+                
+                // 隨機飄移量 (-30vw 到 +30vw)
+                const drift = (Math.random() - 0.5) * 60; 
+                // 隨機旋轉角度
+                const rotate = Math.random() * 720 - 360; 
+                
+                el.style.transform = `translateX(${drift}vw) rotate(${rotate}deg)`;
+                el.style.opacity = '0.7'; // 落下時稍微變透明
+            }, Math.random() * 300); // 0~0.3秒的發射延遲
             
-            setTimeout(() => el.remove(), 1000);
+            // 清理
+            setTimeout(() => el.remove(), duration * 1000 + 500);
         }
     }
 };
